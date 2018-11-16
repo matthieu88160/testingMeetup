@@ -1,0 +1,21 @@
+{
+    "name": "matthieu88160/testing-meetup",
+    "description": "The testing meetup project",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^7.5@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "matthieu vallance",
+            "email": "matthieu.vallance@cscfa.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+    	"psr-4": {
+    		"test\\": "src/"
+    	}
+    }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- https://phpunit.de/manual/current/en/appendixes.configuration.html -->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/6.0/phpunit.xsd"
+         bootstrap="./vendor/autoload.php"
+	>
+	
+	<testsuites>
+	    <testsuite name="unit">
+	    	<directory>src/tests</directory>
+        </testsuite>
+    </testsuites>
+	 <filter>
+        <whitelist>
+            <directory>src</directory>
+            <exclude>
+                <directory>src/tests</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="doc/coverage" lowUpperBound="80" highLowerBound="95"/>
+    </logging>
+</phpunit>
