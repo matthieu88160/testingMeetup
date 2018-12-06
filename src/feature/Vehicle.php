@@ -17,5 +17,11 @@ class Vehicle
     {
         return 'onk';
     }
+
+    public function getDriverLicense(Driver $driver, string $date)
+    {
+        $licenseExtractor = new DriverExtractor();
+        return $licenseExtractor->extractLicense($driver);
+    }
 }
 
